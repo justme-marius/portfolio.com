@@ -44,32 +44,50 @@ defineOptions({
   name: "MainLayout",
 });
 
-const linksList = ref([
+const linksList = [
   {
-    title: "Section 1",
-    caption: "Navigate to Container 1",
-    icon: "public",
-    link: "#section1",
+    title: "Docs",
+    caption: "quasar.dev",
+    icon: "school",
+    link: "#1",
   },
   {
-    title: "Section 2",
-    caption: "Navigate to Container 2",
-    icon: "public",
-    link: "#section2",
+    title: "Github",
+    caption: "github.com/quasarframework",
+    icon: "code",
+    link: "#2",
   },
   {
-    title: "Section 3",
-    caption: "Navigate to Container 3",
-    icon: "public",
-    link: "#section3",
+    title: "Discord Chat Channel",
+    caption: "chat.quasar.dev",
+    icon: "chat",
+    link: "#2",
   },
   {
-    title: "Section 4",
-    caption: "Navigate to Container 4",
-    icon: "public",
-    link: "#section4",
+    title: "Forum",
+    caption: "forum.quasar.dev",
+    icon: "record_voice_over",
+    link: "#2",
   },
-]);
+  {
+    title: "Twitter",
+    caption: "@quasarframework",
+    icon: "rss_feed",
+    link: "https://twitter.quasar.dev",
+  },
+  {
+    title: "Facebook",
+    caption: "@QuasarFramework",
+    icon: "public",
+    link: "https://facebook.quasar.dev",
+  },
+  {
+    title: "Quasar Awesome",
+    caption: "Community Quasar projects",
+    icon: "favorite",
+    link: "https://awesome.quasar.dev",
+  },
+];
 
 const leftDrawerOpen = ref(false);
 

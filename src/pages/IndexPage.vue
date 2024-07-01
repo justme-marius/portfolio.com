@@ -1,15 +1,34 @@
 <template>
-  <q-page class="flex flex-center">
-    <img
-      alt="Quasar logo"
-      src="~assets/quasar-logo-vertical.svg"
-      style="width: 200px; height: 200px"
-    />
-  </q-page>
+  <sectionContainer
+    v-for="section in sectionList"
+    :key="section.id"
+    v-bind="section"
+  >
+    <!-- MISSING: Section Components passed throug slots -->
+  </sectionContainer>
 </template>
 
 <script setup>
+import sectionContainer from "./sections/section-container.vue";
+
+const sectionList = [
+  {
+    id: "1",
+    components: "" /* array? */,
+  },
+  {
+    id: "2",
+  },
+  {
+    id: "3",
+  },
+  {
+    id: "4",
+  },
+];
+
 defineOptions({
   name: "IndexPage",
+  path: "/",
 });
 </script>

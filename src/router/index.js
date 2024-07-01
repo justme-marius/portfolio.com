@@ -24,7 +24,17 @@ export default route(function (/* { store, ssrContext } */) {
     : createWebHashHistory;
 
   const Router = createRouter({
-    scrollBehavior: () => ({ left: 0, top: 0 }),
+    /* scrollBehavior: () => ({ left: 0, top: 0 }), */
+    scrollBehavior(to, from, savedPosition) {
+      if (to.hash) {
+        return {
+          el: to.hash,
+          top: 50,
+          behavior: "smooth",
+        };
+      }
+    },
+
     routes,
 
     // Leave this as is and make changes in quasar.conf.js instead!
@@ -32,6 +42,26 @@ export default route(function (/* { store, ssrContext } */) {
     // quasar.conf.js -> build -> publicPath
     history: createHistory(process.env.VUE_ROUTER_BASE),
   });
+
+  /* NAVIGATION GUARDS RULES */
+  /*   Router.beforeEach(async (to, from) => {
+    if (
+      // make sure the user is authenticated
+      !isAuthenticated &&
+      // ❗️ Avoid an infinite redirect
+      to.name !== 'Login'
+    ) {
+      // redirect the user to the login page
+      return { name: 'Login' }
+    } else false
+  })
+
+  //used with await and promises
+  Router.beforeEach(async (to, from) => {
+    // canUserAccess() returns `true` or `false`
+    const canAccess = await canUserAccess(to)
+    if (!canAccess) return '/login'
+  }) */
 
   return Router;
 });
