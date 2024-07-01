@@ -10,13 +10,34 @@ html {
   body {
     .PageSection {
       border: solid 5px;
-      text-decoration: none;
+      text-align: center;
+
       overflow-y: scroll;
       height: calc(100vh - 50px);
-      max-height: calc(100vh - 50px);
-      flex-wrap: wrap;
     }
   }
+
+  /* SCROLLBAR SETTINGS (EXPERIMENTAL, MIGHT NOT WORK FOR EVERYONE) */
+  .invisible-scrollbar,
+  .mostly-customized-scrollbar {
+    display: block;
+    overflow: auto;
+    height: 2em;
+  }
+
+  .mostly-customized-scrollbar::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #aaa;
+  }
+
+  .mostly-customized-scrollbar::-webkit-scrollbar-thumb {
+    background: #000;
+  }
+  .invisible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* ---------------------------------------------------------------- */
 }
 
 /* Tone down the animation to avoid vestibular motion triggers. */

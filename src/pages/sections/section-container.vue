@@ -1,8 +1,11 @@
 <template>
-  <q-page class="flex flex-center">
-    <div :id="'section' + props.id" class="PageSection">
+  <q-page>
+    <div
+      :id="'section' + props.id"
+      class="PageSection mostly-customized-scrollbar"
+    >
       <h1>Section {{ props.id }}</h1>
-      <div style="border: solid 2px; padding: 3rem">
+      <div style="padding: 3rem">
         <h2>Lorem ipsum dolor sit amet,</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -17,7 +20,7 @@
         alt="picsum photo random placeholder img a 300x300"
       />
 
-      <div style="border: solid 2px; padding: 3rem">
+      <div style="padding: 3rem">
         <h2>Lorem ipsum dolor sit amet,</h2>
         <p>
           Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
@@ -38,10 +41,6 @@
 <script setup>
 const props = defineProps({
   id: {
-    type: String,
-    required: true,
-  },
-  title: {
     type: String,
     required: true,
   },

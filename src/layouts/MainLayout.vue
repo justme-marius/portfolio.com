@@ -18,7 +18,7 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above no-swipe-backdrop="true">
+    <q-drawer v-model="leftDrawerOpen" show-if-above>
       <q-list>
         <q-item-label header> Navigation </q-item-label>
 
