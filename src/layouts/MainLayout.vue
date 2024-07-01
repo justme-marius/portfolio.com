@@ -18,11 +18,12 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer v-model="leftDrawerOpen" show-if-above no-swipe-backdrop="true">
       <q-list>
         <q-item-label header> Navigation </q-item-label>
 
         <EssentialLink
+          no-swipe-close="true"
           v-for="link in linksList"
           :key="link.title"
           v-bind="link"

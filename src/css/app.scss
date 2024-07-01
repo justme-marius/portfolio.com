@@ -3,4 +3,25 @@
 html {
   overflow: hidden;
   scroll-behavior: smooth;
+  /*   body {
+    min-height: 0;
+  } */
+
+  body {
+    .PageSection {
+      border: solid 5px;
+      text-decoration: none;
+      overflow-y: scroll;
+      height: calc(100vh - 50px);
+      max-height: calc(100vh - 50px);
+      flex-wrap: wrap;
+    }
+  }
+}
+
+/* Tone down the animation to avoid vestibular motion triggers. */
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
 }
