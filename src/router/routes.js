@@ -11,12 +11,21 @@ const routes = [
   },
 
   {
+    path: "/archive",
+    component: () => import("layouts/MainLayout.vue"),
+    children: [
+      { path: "/archive", component: () => import("pages/ArchivePage.vue") },
+    ],
+  },
+
+  {
     path: "/user",
     component: () => import("layouts/UserLayout.vue"),
     children: [
       { path: "/user", component: () => import("pages/UserIndexPage.vue") },
     ],
   },
+
   /*   {
     path: "/contact",
     component: () => import("layouts/MainLayout.vue"),

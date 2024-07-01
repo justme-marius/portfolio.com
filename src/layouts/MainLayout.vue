@@ -22,12 +22,13 @@
       <q-list>
         <q-item-label header> Navigation </q-item-label>
 
-        <EssentialLink
-          no-swipe-close="true"
-          v-for="link in linksList"
-          :key="link.title"
-          v-bind="link"
-        />
+        <ul v-for="obj in thetree" :key="obj.id">
+          <router-link to="#">Page Heading {{}}</router-link>
+
+          <li v-for="link in obj" :key="link.id">
+            <EssentialLink v-bind="link" />
+          </li>
+        </ul>
       </q-list>
     </q-drawer>
 
@@ -40,37 +41,13 @@
 <script setup>
 import { ref } from "vue";
 import EssentialLink from "components/EssentialLink.vue";
+import thetree from "assets/lorem.ipsum/thetree.json";
 
 defineOptions({
   name: "MainLayout",
 });
 
-const linksList = ref([
-  {
-    title: "Section 1",
-    caption: "Navigate to Container 1",
-    icon: "public",
-    link: "#section1",
-  },
-  {
-    title: "Section 2",
-    caption: "Navigate to Container 2",
-    icon: "public",
-    link: "#section2",
-  },
-  {
-    title: "Section 3",
-    caption: "Navigate to Container 3",
-    icon: "public",
-    link: "#section3",
-  },
-  {
-    title: "Section 4",
-    caption: "Navigate to Container 4",
-    icon: "public",
-    link: "#section4",
-  },
-]);
+const treeKeys = Object.keys(thetree);
 
 const leftDrawerOpen = ref(false);
 

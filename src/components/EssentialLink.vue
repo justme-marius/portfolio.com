@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="props.link">
+  <router-link :to="'#section' + props.id">
     <q-item>
       <q-item-section v-if="props.icon" avatar>
         <q-icon :name="props.icon" />
@@ -29,7 +29,7 @@ const props = defineProps({
     default: "",
   },
 
-  link: {
+  id: {
     type: String,
     default: "#",
   },

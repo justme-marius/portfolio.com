@@ -1,0 +1,54 @@
+{
+  "/": [
+    {
+      "title": "Section 1",
+      "caption": "Navigate to C1P1",
+      "icon": "public",
+      "id": "1"
+    },
+    {
+      "title": "Section 2",
+      "caption": "Navigate to C2P1",
+      "icon": "public",
+      "id": "2"
+    },
+    {
+      "title": "Section 3",
+      "caption": "Navigate to C3P1",
+      "icon": "public",
+      "id": "3"
+    },
+    {
+      "title": "Section 4",
+      "caption": "Navigate to C4P1",
+      "icon": "public",
+      "id": "4"
+    }
+  ],
+  "/archive": [
+    {
+      "title": "Section 2",
+      "caption": "Navigate to C2P2",
+      "icon": "public",
+      "id": "2"
+    },
+    {
+      "title": "Section 2",
+      "caption": "Navigate to C2P2",
+      "icon": "public",
+      "id": "2"
+    },
+    {
+      "title": "Section 3",
+      "caption": "Navigate to C3P2",
+      "icon": "public",
+      "id": "3"
+    },
+    {
+      "title": "Section 4",
+      "caption": "Navigate to C4P2",
+      "icon": "public",
+      "id": "4"
+    }
+  ]
+}

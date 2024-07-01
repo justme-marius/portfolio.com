@@ -17,6 +17,16 @@ html {
     }
   }
 
+  ul:before {
+    content: attr(aria-label);
+    font-size: 120%;
+    font-weight: bold;
+    margin-left: -15px;
+  }
+  ul {
+    list-style-type: none;
+  }
+
   /* SCROLLBAR SETTINGS (EXPERIMENTAL, MIGHT NOT WORK FOR EVERYONE) */
   .invisible-scrollbar,
   .mostly-customized-scrollbar {
