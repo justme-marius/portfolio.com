@@ -11,6 +11,13 @@
 <script setup>
 import sectionContainer from "./sections/section-container.vue";
 
+/* const props = defineProps({
+  sectionList: {
+    type: Array,
+    required: true,
+  }
+}); */
+
 const sectionList = [
   {
     id: "1",

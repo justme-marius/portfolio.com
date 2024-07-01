@@ -21,9 +21,9 @@
     <q-drawer v-model="leftDrawerOpen" show-if-above>
       <q-list>
         <q-item-label header> Navigation </q-item-label>
-
+        <!-- TODO:  Collapsable Section Groups in the Navigation Drawer -->
         <ul v-for="obj in thetree" :key="obj.id">
-          <router-link to="#">Page Heading {{}}</router-link>
+          <router-link to="#">"Section Group Topic X"</router-link>
 
           <li v-for="link in obj" :key="link.id">
             <EssentialLink v-bind="link" />
@@ -33,7 +33,7 @@
     </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <router-view v-bind="thetree" />
     </q-page-container>
   </q-layout>
 </template>
@@ -47,7 +47,7 @@ defineOptions({
   name: "MainLayout",
 });
 
-const treeKeys = Object.keys(thetree);
+/* const treeKeys = Object.keys(thetree); */
 
 const leftDrawerOpen = ref(false);
 
