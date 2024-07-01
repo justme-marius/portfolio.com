@@ -15,7 +15,7 @@
       </div>
 
       <img
-        style="padding: 3rem"
+        style=""
         src="https://picsum.photos/500/300"
         alt="picsum photo random placeholder img a 300x300"
       />
@@ -30,7 +30,7 @@
       </div>
 
       <img
-        style="padding: 3rem"
+        style=""
         src="https://picsum.photos/500/300"
         alt="picsum photo random placeholder img a 300x300"
       />
