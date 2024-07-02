@@ -1,41 +1,10 @@
 <template>
-  <sectionContainer
-    v-for="section in sectionList"
-    :key="section.id"
-    v-bind="section"
-  >
-    <!-- MISSING: Section Components passed throug slots -->
-  </sectionContainer>
+  <q-page class="flex flex-center">
+    <loginDialog></loginDialog>
+    <loginDialog></loginDialog>
+  </q-page>
 </template>
 
 <script setup>
-import sectionContainer from "./sections/section-container.vue";
-
-/* const props = defineProps({
-  sectionList: {
-    type: Array,
-    required: true,
-  }
-}); */
-
-const sectionList = [
-  {
-    id: "1",
-    components: "" /* array? */,
-  },
-  {
-    id: "2",
-  },
-  {
-    id: "3",
-  },
-  {
-    id: "4",
-  },
-];
-
-defineOptions({
-  name: "IndexPage",
-  path: "/",
-});
+import loginDialog from 'components/LoginDialog.vue'
 </script>

@@ -1,30 +1,25 @@
 const routes = [
   {
     path: "/",
-    component: () => import("layouts/MainLayout.vue"),
+    component: () => import("layouts/StartLayout.vue"),
     children: [
       {
         path: "",
         component: () => import("pages/IndexPage.vue"),
-      },
+      }
     ],
   },
+  /* path: "/home",
+  component: () => import("layouts/MainLayout.vue"),
+  children: [
+    {
+      path: "",
+      component: () => import("pages/HomePage.vue"),
+      children: []
+    },
+  ], */
 
-  {
-    path: "/archive",
-    component: () => import("layouts/MainLayout.vue"),
-    children: [
-      { path: "/archive", component: () => import("pages/ArchivePage.vue") },
-    ],
-  },
 
-  {
-    path: "/user",
-    component: () => import("layouts/UserLayout.vue"),
-    children: [
-      { path: "/user", component: () => import("pages/UserIndexPage.vue") },
-    ],
-  },
 
   /*   {
     path: "/contact",
@@ -40,7 +35,7 @@ const routes = [
   // but you can also remove it
   {
     path: "/:catchAll(.*)*",
-    component: () => import("pages/ErrorNotFound.vue"),
+    component: () => import("src/pages/E404.vue"),
   },
 ];
 
